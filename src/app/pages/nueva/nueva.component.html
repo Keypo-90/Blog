@@ -1,0 +1,38 @@
+<div class="container">
+    <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+        <div class="descripcion">
+
+            <div class="col-12 col-lg-2">
+                <label class="form-label">Título</label>
+                <input type="text" class="form-control" formControlName="titulo" />
+            </div>
+            <div class="col-12 col-lg-2">
+                <label class="form-label">Categoría</label>
+                <select class="form-select" aria-label="Large select example" formControlName="categoria">
+                    <option selected>Selecciona una categoría</option>
+                    <option value="cine">Cine</option>
+                    <option value="series">Series</option>
+                    <option value="musica">Música</option>
+                </select>
+            </div>
+            <div class="col-12 col-lg-2">
+                <label class="form-label">Autor</label>
+                <input type="text" class="form-control" formControlName="autor" />
+            </div>
+            <div class="col-12 col-lg-2">
+                <label class="form-label">Imagen</label>
+                <input type="text" class="form-control" formControlName="imagen"
+                    placeholder="Copia la url de tu imagen" />
+            </div>
+        </div>
+        <div class=" texto  col-lg-12 max-width-lg-71% ">
+            <label class="form-label">Texto</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" formControlName="texto"
+                placeholder="Escribe aqui..."></textarea>
+
+        </div>
+        <div class="boton">
+            <input type="submit" value="Enviar" class="btn btn-light" />
+        </div>
+    </form>
+</div>
